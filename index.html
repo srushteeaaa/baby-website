@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Everything Reminds Me of You, Baby</title>
+
+<style>
+        body {
+            background-color: #e6f2ff;
+            font-family: "Comic Sans MS", cursive;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        h1 {
+            color: #3b6ea5;
+            font-size: 40px;
+        }
+
+        p {
+            color: #4f7fbf;
+            font-size: 20px;
+            width: 60%;
+            margin: auto;
+            line-height: 1.8;
+        }
+	button {
+    background-color: #b3d9ff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #3b6ea5;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #99ccff;
+}
+.heart {
+    position: fixed;
+    bottom: -10px;
+    font-size: 20px;
+    animation: floatUp 6s linear infinite;
+    color: #6fa8dc;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+h2 {
+    color: #3b6ea5;
+    margin-top: 60px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    font-size: 16px;
+    color: #3b6ea5;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+.songs {
+    margin-top: 20px;
+}
+
+.song {
+    background-color: #d9ecff;
+    padding: 10px;
+    margin: 10px auto;
+    width: 300px;
+    border-radius: 10px;
+    color: #3b6ea5;
+}
+.song-link {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 20px;
+    background-color: #b3d9ff;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #3b6ea5;
+    font-size: 16px;
+}
+
+
+    </style>
+</head>
+
+<script>
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.innerHTML = "💙";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 6000);
+    }
+
+    setInterval(createHeart, 800);
+</script>
+
+<body>
+    <h1>Everything Reminds Me of You 💙</h1>
+    <p>
+        To my baby,  
+        I keep finding you everywhere.  
+        You are my cutest thought.
+    </p>
+
+	<button onclick="showKiss()">Click for a kiss </button>
+
+<p id="kissMessage" style="display:none; font-size:18px; color:#3b6ea5; margin-top:20px;">
+    You just got a kiss from me 😘
+</p>
+<h2>Things That Are You </h2>
+
+<div class="cards">
+    <div class="card" onclick="showMessage('That shy smile is my favourite view in the whole world 💗')">
+        Your shy smile 
+    </div>
+    <div class="card" onclick="showMessage('With you, I feel safe, calm, and at home')">
+        The way you make me feel safe
+    </div>
+    <div class="card" onclick="showMessage('Your voice is my comfort sound')">
+        Your soft voice 
+    </div>
+    <div class="card" onclick="showMessage('Your words always make everything okay')">
+        Your reassuring words
+    </div>
+</div>
+
+<p id="cardMessage" style="margin-top:20px; color:#3b6ea5; font-size:18px;"></p>
+
+<a href="songs.html" class="song-link">Songs that reminds me of youu </a>
+
+<a href="secret.html" class="song-link">A secret just for you </a>
+
+<a href="puzzle.html" class="song-link">A little something for you </a>
+
+<a href="compliments.html" class="song-link">Something moreeee </a>
+
+
+
+</body>
+
+
+<script>
+    function showKiss() {
+        document.getElementById("kissMessage").style.display = "block";
+    }
+	function showMessage(text) {
+    document.getElementById("cardMessage").innerText = text;
+}
+
+</script>
+
+</html>
+

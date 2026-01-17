@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Songs That Remind Me of You 💙</title>
+<style>
+body {
+  margin: 0;
+  font-family: "Comic Sans MS", cursive;
+  background-color: #e6f2ff;
+  color: #3b6ea5;
+  overflow-x: hidden;
+}
+
+.back {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: #b3d9ff;
+  padding: 10px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #3b6ea5;
+  z-index: 10;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.title {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.caption {
+  font-size: 18px;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.play {
+  background: #b3d9ff;
+  padding: 12px 22px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #3b6ea5;
+}
+.heart {
+  position: fixed;
+  color: pink;
+  font-size: 14px;
+  opacity: 0.6;
+  animation: float 6s linear infinite;
+}
+@keyframes float {
+  from { transform: translateY(100vh); }
+  to { transform: translateY(-10vh); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<a href="baby.html" class="back">← Back to you 💙</a>
+
+<div class="section">
+  <div class="title">Chance With You </div>
+  <div class="caption">This feels like choosing you again and again, like even with a thousand chances, I’d still pick you every time.</div>
+  <a class="play" href="https://open.spotify.com/track/7qFtcljd0PZ5kJZos70YjT" target="_blank">You can play it on Spotify </a>
+</div>
+
+<div class="section">
+  <div class="title">I Guess I'm In Love </div>
+  <div class="caption">This feels like that soft moment when you realise your heart is already his.</div>
+  <a class="play" href="https://open.spotify.com/track/1is8gU4RVcN4J8xItxWoOY" target="_blank">Play on Spotifyy </a>
+</div>
+
+<div class="section">
+  <div class="title">Nothing </div>
+  <div class="caption">This song feels like peace, like doing nothing with you and still feeling everything.</div>
+  <a class="play" href="https://open.spotify.com/track/1lORkxEMmsCZqhoxcmk3A3" target="_blank">This one aswell </a>
+</div>
+
+<div class="section">
+  <div class="title">Have We Met Before? </div>
+  <div class="caption">Like our souls somehow knew each other before our hearts did.</div>
+  <a class="play" href="https://open.spotify.com/track/13CgWZWZ0duVzOrGZTcnKq" target="_blank">This one tooo </a>
+</div>
+
+<div class="section">
+  <div class="title">Be My Baby </div>
+  <div class="caption">Old-school love, simple and sweet, like wanting to belong to each other forever.</div>
+  <a class="play" href="https://open.spotify.com/track/1WN4uNclrDuczTO3bCr8s1" target="_blank">Spotifyyyy </a>
+</div>
+
+<div class="section">
+  <div class="title">This Town </div>
+  <div class="caption">Like no matter where I go, everything somehow reminds me of you.</div>
+  <a class="play" href="https://open.spotify.com/track/0qvzXomUDJVaUboy2wMfiS" target="_blank">spotify </a>
+</div>
+
+<div class="section">
+  <div class="title">Iris </div>
+  <div class="caption">Loving you so deeply that I’d let the whole world see my heart.</div>
+  <a class="play" href="https://open.spotify.com/track/6Qyc6fS4DsZjB2mRW9DsQs" target="_blank">You know it now </a>
+</div>
+
+<div class="section">
+  <div class="title">And so many more…</div>
+  <div class="caption">There are so many songs that remind me of you, but if I added them all, this page would never end just like the ways I love you.</div>
+</div>
+
+<script>
+setInterval(() => {
+  const h = document.createElement("div");
+  h.className = "heart";
+  h.innerHTML = "❤";
+  h.style.left = Math.random() * 100 + "vw";
+  h.style.top = "100vh";
+  document.body.appendChild(h);
+  setTimeout(() => h.remove(), 6000);
+}, 1200);
+</script>
+
+</body>
+</html>
+
+

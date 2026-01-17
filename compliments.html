@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Click the Heart 💗</title>
+<style>
+body {
+  margin: 0;
+  background: #e6f2ff;
+  font-family: "Comic Sans MS", cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  color: #3b6ea5;
+}
+
+.heart {
+  font-size: 120px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.heart:active {
+  transform: scale(0.9);
+}
+
+#text {
+  margin-top: 20px;
+  font-size: 20px;
+  max-width: 300px;
+}
+
+.back-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: #b3d9ff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #3b6ea5;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+</style>
+</head>
+
+<body>
+
+<a href="baby.html" class="back-btn">← Back to you 💙</a>
+
+<div class="heart" onclick="showLove()">💗</div>
+
+<div id="text">click the heart (gently okay)</div>
+
+<script>
+const compliments = [
+  "You’re my favorite notification.",
+  "You’re cute even when you’re doing absolutely nothing.",
+  "You make the world feel softer.",
+  "I like you more than sleep.",
+  "Your smile is my favorite.",
+  "You’re my comfort person.",
+  "You make my bad days behave.",
+  "I’d still choose you in every lifetime.",
+  "You feel like home to me.",
+  "You’re the kind of person my heart feels safe with."
+];
+
+function showLove() {
+  const random = Math.floor(Math.random() * compliments.length);
+  document.getElementById("text").innerText = compliments[random];
+}
+</script>
+
+</body>
+</html>
